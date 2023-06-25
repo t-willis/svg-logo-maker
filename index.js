@@ -29,16 +29,17 @@ prompt(questions).then((answers) => {
     if (key === 'Square') {
         shape = new Square(answers.text, answers.textColor, answers.shapeName, answers.shapeColor);
         const test = genSVGSqr(shape.text, shape.textColor, shape.shapeColor);
-        fs.writeFileSync('TESTING.svg', test);
+        fs.writeFileSync('./dist/logo.svg', test);
     } else if (key === 'Circle') {
         shape = new Circle(answers.text, answers.textColor, answers.shapeName, answers.shapeColor);
         const test = genSVGCir(shape.text, shape.textColor, shape.shapeColor);
-        fs.writeFileSync('TESTING.svg', test);
+        fs.writeFileSync('./dist/logo.svg', test);
     } else if (key === 'Triangle') {
         shape = new Triangle(answers.text, answers.textColor, answers.shapeName, answers.shapeColor);
         const test = genSVGTri(shape.text, shape.textColor, shape.shapeColor);
-        fs.writeFileSync('TESTING.svg', test);
+        fs.writeFileSync('./dist/logo.svg', test);
     } else {
         console.log("big time error. how did you even choose NOT an option?");
     }
+    console.log("Generated logo.svg!")
 })
