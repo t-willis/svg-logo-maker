@@ -2,11 +2,11 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
 const questions = require("./lib/questions");
-const { Shape, Square, Circle, Triangle } = require("./lib/shapes");
+const { Square, Circle, Triangle } = require("./lib/shapes");
 const { genSVGSqr, genSVGCir, genSVGTri } = require("./lib/genSVG");
 
-
 prompt(questions).then((answers) => {
+    answers.text = answers.text.toUpperCase();
     const hasNumber = /\d/;
     if (answers.text.length > 3) {
         answers.text = answers.text.slice(0,3);
@@ -20,6 +20,10 @@ prompt(questions).then((answers) => {
         answers.textColor = `#${answers.shapeColor}`;
         console.log(`You seem to have entered a hex color code but didn't add a #! Don't worry, I fixed it for you.`)
     }
+    if (answers.text === "" || answers.textColor === "" || answers.shapeColor === "") {
+        console.log("You didn't enter anything in the entry fields!");
+        return;
+    } 
     let key = answers.shapeName;
     let shape;
     if (key === 'Square') {
