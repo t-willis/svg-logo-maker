@@ -24,15 +24,15 @@ prompt(questions).then((answers) => {
     let key = answers.shapeName;
     let shape;
     if (key === 'Square') {
-        shape = new Square(answers.text, answers.textColor, answers.shapeName, answers.shapeColor);
+        shape = new Square(answers.text, answers.textColor, answers.shapeColor);
         const logo = genSVGSqr(shape.text, shape.textColor, shape.shapeColor);
         fs.writeFileSync('./dist/logo.svg', logo);
     } else if (key === 'Circle') {
-        shape = new Circle(answers.text, answers.textColor, answers.shapeName, answers.shapeColor);
+        shape = new Circle(answers.text, answers.textColor, answers.shapeColor);
         const logo = genSVGCir(shape.text, shape.textColor, shape.shapeColor);
         fs.writeFileSync('./dist/logo.svg', logo);
     } else if (key === 'Triangle') {
-        shape = new Triangle(answers.text, answers.textColor, answers.shapeName, answers.shapeColor);
+        shape = new Triangle(answers.text, answers.textColor, answers.shapeColor);
         const logo = genSVGTri(shape.text, shape.textColor, shape.shapeColor);
         fs.writeFileSync('./dist/logo.svg', logo);
     } else {
