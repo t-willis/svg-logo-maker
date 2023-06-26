@@ -67,3 +67,5 @@ The second set of tests were designed to ensure that the generation functions we
 [regex101.con](https://regex101.com/) - How to use regex to .test() a string for matches.
 
 ---
+
+[return to top](#description)
