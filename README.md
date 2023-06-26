@@ -30,7 +30,7 @@ To install the application you'll need to do the following:
 
 ## Usage
 
-A short video demonstration can be found here: [Click here!](http://www.ihaventdonethisyet.com)
+A short video demonstration can be found here: [Click here!](https://drive.google.com/file/d/1FhkhfaDvoTjCJ1lxWKSpszvWvi_zjfDr/view?pli=1)
 
 After being invoked in the terminal the user will be prompted with several input fields and options. Once all fields have been entered/chosen the ./dist/logo.svg file will be created using said choices. If at any point the user wishes to create another it will overwrite the existing logo.svg file.
 
